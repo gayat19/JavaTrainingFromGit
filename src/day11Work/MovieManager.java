@@ -40,10 +40,13 @@ public class MovieManager {
 	{
 		int index = -1;
 		for (int i = 0; i <= numberOfMovies; i++) {
-			if(movies[i].getId()==id)
+			if(movies[i]!= null)
 			{
-				index = i;
-				break;
+				if(movies[i].getId()==id)
+				{
+					index = i;
+					break;
+				}
 			}
 		}
 		return index;
