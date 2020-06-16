@@ -17,8 +17,13 @@ public class ExceptionExamaple {
 			myMap.put(102,"Somu");
 			myMap.put(103,"Bimu");
 			myMap.put(103,"Lomu");
-			String data = myMap.get(101).toLowerCase();
-			int result =100/(100-100);
+			try {
+				String data = myMap.get(101).toLowerCase();
+				int result =100/(100-100);
+			}
+			catch(ArithmeticException e) {
+				System.out.println("Invalid number operation");
+			}
 			System.out.println("Map filled");
 		} 
 		catch (NullPointerException e) {
@@ -56,16 +61,16 @@ public class ExceptionExamaple {
 		
 	}
 	
-	void checkVoteEligibility() {
+	void checkVoteEligibility() throws MyAgeException {
 		int age = 12;
-		try {
+		//try {
 			 if(age<18)
 				throw new MyAgeException();
 			System.out.println("You can vote...");
-			} catch (MyAgeException e) {
+			/*} catch (MyAgeException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
-			}
+			}*/
 	
 	}
 	
@@ -75,7 +80,12 @@ public class ExceptionExamaple {
 		/*ee.addDataToMap();
 		ee.printMap();
 		ee.fileRead();*/
-		ee.checkVoteEligibility();
+		try {
+			ee.checkVoteEligibility();
+		} catch (MyAgeException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 }
