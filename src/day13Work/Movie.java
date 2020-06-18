@@ -46,7 +46,7 @@ public class Movie implements Comparable<Movie> {
 	public void setDuration(float duration) {
 		this.duration = duration;
 	}
-	public void getMovieDetailsFromUser() {
+	public synchronized void getMovieDetailsFromUser() {
 		System.out.println("Please enter the movie id");
 		id = scanner.nextInt();
 		scanner.nextLine();
