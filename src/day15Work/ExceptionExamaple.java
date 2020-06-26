@@ -78,14 +78,14 @@ public class ExceptionExamaple {
 		
 		ExceptionExamaple ee = new ExceptionExamaple();
 		/*ee.addDataToMap();
-		ee.printMap();
-		ee.fileRead();*/
-		try {
+		ee.printMap();*/
+		ee.fileRead();
+		/*try {
 			ee.checkVoteEligibility();
 		} catch (MyAgeException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		}*/
 	}
 
 }
